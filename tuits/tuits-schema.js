@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
+import {ObjectID} from "mongodb";
 const schema = mongoose.Schema({
+  _id: ObjectID,
   topic: String,
   username: String,
   handle: String,

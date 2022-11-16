@@ -9,10 +9,6 @@ const findTuits = async (req, res) => {
 const createTuit = async (req, res) => {
   const newTuit = req.body;
   newTuit._id = new ObjectID()
-  newTuit.likes = 0;
-  newTuit.liked = false;
-  newTuit.retuits = 0;
-  newTuit.replies = 0;
   const insertedTuit = await tuitsDao.createTuit(newTuit)
   res.json(insertedTuit);
 }
